@@ -5,7 +5,7 @@ import netlify from '@astrojs/netlify/functions';
 import node from '@astrojs/node';
 import autoProcess from './src/process/start';
 
-cron.schedule('00 25 17 * * *', () => {
+cron.schedule(process.env.CRON_EXPRESSION, () => {
   autoProcess();
 });
 
