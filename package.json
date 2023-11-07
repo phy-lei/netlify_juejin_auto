@@ -1,0 +1,24 @@
+{
+  "name": "toolkit",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "build:netlify": "OUTPUT=netlify astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^3.0.1",
+    "@astrojs/node": "^6.0.0",
+    "astro": "^3.4.0",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "got": "11.8.2",
+    "koa": "^2.14.2",
+    "node-cron": "^3.0.2",
+    "typescript": "^5.2.2"
+  }
+}
