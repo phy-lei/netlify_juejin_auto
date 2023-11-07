@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import 'dotenv/config';
 import netlify from '@astrojs/netlify/functions';
 import node from '@astrojs/node';
 

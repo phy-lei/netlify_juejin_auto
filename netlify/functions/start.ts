@@ -121,5 +121,5 @@ async function autoProcess() {
   };
 }
 
-
-exports.handler = schedule('46 11 * * *', autoProcess);
+// 这是美国时间 注意换算
+exports.handler = schedule('30 17 * * *', autoProcess);

@@ -15,7 +15,6 @@
     "@astrojs/node": "^6.0.0",
     "@netlify/functions": "^2.3.0",
     "astro": "^3.4.0",
-    "dotenv": "^16.3.1",
     "form-data": "^4.0.0",
     "got": "11.8.2",
     "typescript": "^5.2.2"

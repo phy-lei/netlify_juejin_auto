@@ -13,7 +13,6 @@
 | `JUEJIN_UUID` | uuid | `null` |
 | `JUEJIN_SIGNATURE` | 签名 可为空 | `null` |
 | `JUEJIN_SERVER_SEND_KEY` | server 酱 key | `null` |
-| `CRON_EXPRESSION` | 设置每天任务时间 cron 表达式 | `null` |
 
 ## 部署
 
