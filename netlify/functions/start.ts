@@ -122,4 +122,4 @@ async function autoProcess() {
 }
 
 
-exports.handler = schedule('0 0 * * *', autoProcess);
+exports.handler = schedule('46 11 * * *', autoProcess);
