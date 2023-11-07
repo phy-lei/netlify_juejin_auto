@@ -121,6 +121,5 @@ async function autoProcess() {
   };
 }
 
-const CRON_EXPRESSION = process.env.CRON_EXPRESSION
 
-exports.handler = schedule(CRON_EXPRESSION, autoProcess);
+exports.handler = schedule('36 11 18 * * *', autoProcess);
