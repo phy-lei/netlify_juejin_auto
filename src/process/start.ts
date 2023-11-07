@@ -27,7 +27,6 @@ async function sleep(time) {
 
 // 签到
 async function signIn() {
-  console.log('%c [ signIn ]', 'font-size:13px; background:pink; color:#bf2c9f;',);
   const res = await got.post(URL, {
     hooks: {
       beforeRequest: [
@@ -37,7 +36,6 @@ async function signIn() {
       ],
     },
   });
-  console.log('res.body', res.body);
   return JSON.parse(res.body);
 }
 
@@ -52,7 +50,6 @@ async function draw() {
       ],
     },
   });
-  console.log('res.body123123', res.body);
   return JSON.parse(res.body);
 }
 
@@ -62,7 +59,6 @@ async function handlePush({ title, sendinfo }) {
   form.append('title', title);
   form.append('desp', sendinfo);
   const res = await got.post(FT_URL, { body: form });
-  console.log(res.body);
 }
 
 async function autoProcess() {
@@ -114,9 +110,6 @@ async function autoProcess() {
     原因：${drawData.err_msg}`;
   }
 
-  // const FT_URL = `https://sctapi.ftqq.com/${serverSendKey}.send?title=${params.title}&desp=${params.sendinfo}`; //serve酱通知
-  // const res = await got.get(FT_URL);
-  // console.log(res.body);
   handlePush(params);
 }
 
