@@ -4,13 +4,14 @@ import FormData from 'form-data'
 const cookie = process.env.JUEJIN_COOKIE
 const aid = process.env.JUEJIN_AID
 const uuid = process.env.JUEJIN_UUID
-const _signature = process.env.JUEJIN_SIGNATURE
 const serverSendKey = process.env.JUEJIN_SERVER_SEND_KEY
+const msToken = process.env.MS_TOKEN
+const a_bogus = process.env.A_BOGUS
 const BASEURL = 'https://api.juejin.cn/growth_api/v1/check_in'; // 掘金签到api
 const FT_URL = `https://sctapi.ftqq.com/${serverSendKey}.send`; //serve酱通知
 
-const URL = `${BASEURL}?aid=${aid}&uuid=${uuid}&_signature=${_signature}`;
-const DRAW_URL = `https://api.juejin.cn/growth_api/v1/lottery/draw?aid=${aid}&uuid=${uuid}&_signature=${_signature}`; // 抽奖api
+const URL = `${BASEURL}?aid=${aid}&uuid=${uuid}&msToken=${msToken}&a_bogus=${a_bogus}`;
+const DRAW_URL = `https://api.juejin.cn/growth_api/v1/lottery/draw?aid=${aid}&uuid=${uuid}&msToken=${msToken}&a_bogus=${a_bogus}`; // 抽奖api
 const HEADERS = {
   cookie,
   'user-agent':
@@ -120,6 +121,7 @@ async function autoProcess() {
     },
   };
 }
+
 
 // 这是美国时间 注意换算
 exports.handler = schedule('30 17 * * *', autoProcess);
