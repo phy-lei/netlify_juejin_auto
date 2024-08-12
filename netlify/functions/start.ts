@@ -64,6 +64,7 @@ async function handlePush({ title, sendinfo }) {
 }
 
 async function autoProcess() {
+  return 
   const signInData = await signIn();
   // 防止过快签到
   await sleep(2000);
